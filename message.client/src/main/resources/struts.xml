@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="default" extends="struts-default" namespace="/">
+		<result-types>
+			<result-type name="json" class="org.apache.struts2.json.JSONResult" />
+		</result-types>
+		<!-- GLOBAL RESULTS -->
+		<global-results>
+			<result name="unauthorizedAccess" type="redirectAction">unauthorizedAccess</result>
+			<result name="GENERIC_ERROR">/jsp/erreur/generic_error.jsp</result>
+			<result name="SERVICE_FAULT" type="redirectAction">genericError</result>
+			<result name="authentification" type="redirectAction">authentification</result>
+			<result name="index" type="redirectAction">index</result>
+			<result name="unauthorizedMessageAccess">/jsp/erreur/unauthorizedMessageAccess.jsp</result>
+		</global-results>
+
+		<!-- GLOBAL EXCEPTIONS -->
+		<!-- <global-exception-mappings> -->
+		<!-- <exception-mapping exception="fr.cfdt.gasel.service.common.fault.v0.ServiceFault" -->
+		<!-- result="SERVICE_FAULT"/> -->
+		<!-- </global-exception-mappings> -->
+
+		<!-- GLOBAL ACTIONS -->
+		<action name="unauthorizedAccess">
+			<result>/jsp/erreur/unauthorizedAccess.jsp</result>
+		</action>
+		<action name="genericError">
+			<result>/jsp/erreur/generic_error.jsp</result>
+		</action>
+
+		<!-- <action name="logout" class="logoutAction"> -->
+		<!-- <interceptor-ref name="basicStack" /> -->
+		<!-- <result name="success" type="redirect">${url}</result> -->
+		<!-- </action> -->
+
+	</package>
+
+	<include file="struts/struts-accueil.xml" />
+
+</struts>

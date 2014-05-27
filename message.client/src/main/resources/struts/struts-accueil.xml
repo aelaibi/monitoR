@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+       "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+       "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	<package name="pageAccueil" extends="default,json-default">
+<!-- 		acceuil -->
+		<action name="index" class="accueilAction" method="index">
+			<result name="success">/jsp/index.jsp</result>
+		</action>
+
+		<action name="login" class="accueilAction" method="login">
+			<result name="success">/jsp/login/login.jsp</result>
+		</action>
+<!-- 		message	 -->
+		<action name="message" class="messageControllerAction" >
+			<result name="success">/jsp/message/message.jsp</result>
+		</action>
+		<action name="message2" class="message2ControllerAction" >
+			<result name="success">/jsp/message/message2.jsp</result>
+		</action>
+		
+		<action name="selectedMessages" class="message2ControllerAction" method="displaySelected">
+			<result name="success">/jsp/message/displayMessages.jsp</result>
+		</action>
+		
+		
+		<action name="messageList" class="messageControllerAction" method="messageList">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="messageList2" class="message2ControllerAction" method="messageList">
+			<result name="success" type="json">
+			
+			</result>
+		</action>
+	
+	<action name="nombreMessages" class="message2ControllerAction" method="nombreMessages">
+			<result name="success" type="json">
+			 <param name="includeProperties">
+			 nbrMessages
+			 </param>          
+			</result>
+		</action>	
+		<action name="json-tree-data" class="jsonTreeData" >
+			<result name="success" type="json">
+			           <param name="root" ></param>
+			           <param name="nodes"></param>
+			</result>
+		</action>
+<!-- 		role -->
+		<action name="role" class="roleAction" method="index">
+			<result name="success">/jsp/referentiel/roles.jsp</result>
+		</action>
+		<action name="roleList" class="roleAction" method="list">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="roleEdit" class="roleAction" method="edit">
+			<result name="success" type="json"></result>
+		</action>
+<!-- 		application & domaine -->
+		<action name="application" class="applicationDomaineAction" method="index">
+			<result name="success">/jsp/referentiel/application.jsp</result>
+		</action>
+		<action name="applicationList" class="applicationDomaineAction" method="listApplication">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="applicationEdit" class="applicationDomaineAction" method="applicationEdit">
+			<result name="success" type="json"></result>
+		</action>
+		
+		<action name="domainesList" class="applicationDomaineAction" method="listDomainesOfApplication">
+			<result name="success" type="json"></result>
+		</action>
+		<action name="domainesEdit" class="applicationDomaineAction" method="domaineEdit">
+			<result name="success" type="json"></result>
+		</action>
+		
+<!--    Rapports -->
+		<action name="rapport" class="reportingAction" method="index">
+			<result name="success">/jsp/rapports/rapport.jsp</result>
+		</action>
+		<action name="displayRapports" class="reportingAction" method="displayRapports">
+			<result name="success">/jsp/rapports/displayRapports.jsp</result>
+		</action>
+		
+		<action name="getRapport1" class="reportingAction" method="getRapport1">
+			<result type="json" name="success">
+			
+			</result>
+		</action>
+		
+		
+	</package>
+
+</struts>

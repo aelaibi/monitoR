@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- On retrouve ici la liste des beans necessaire pour injecter les classes 
+		Action dans le struts.xml -->
+
+	<bean id="accueilAction"
+		class="ma.neoxia.message.actions.AccueilAction"
+		scope="prototype" />
+		
+	<bean id="roleAction"
+		class="ma.neoxia.message.actions.ref.RoleAction"
+		scope="prototype" />
+		
+	<bean id="messageControllerAction"
+		class="ma.neoxia.message.actions.MessageControllerAction"
+		scope="prototype" />	
+	<bean id="message2ControllerAction"
+		class="ma.neoxia.message.actions.Message2ControllerAction"
+		scope="prototype" />	
+	<bean id="jsonTreeData"
+		class="ma.neoxia.message.actions.JsonTreeData"
+		scope="prototype" />	
+				
+	<bean id="applicationDomaineAction"
+		class="ma.neoxia.message.actions.ref.ApplicationDomaineAction"
+		scope="prototype" />
+
+	<bean id="reportingAction"
+		class="ma.neoxia.message.actions.reporting.reportingAction"
+		scope="prototype" />
+
+</beans>
