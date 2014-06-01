@@ -11,16 +11,13 @@
 	   		http://www.springframework.org/schema/context
 	   		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 			
-	<!-- <context:property-placeholder properties-ref="deployProperties" /> -->
-
-	<!-- Activates various annotations to be detected in bean classes -->
 	 
 	<context:annotation-config />
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 
 	<!-- Scans the classpath for annotated components that will be auto-registered as Spring beans.
 	 For example @Controller and @Service. Make sure to set the correct base-package -->
-	<context:component-scan base-package="ma.neoxia.message" />
+	<context:component-scan base-package="ma.ael.message" />
 	
 	<bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean"/>
 	<bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
@@ -29,20 +26,13 @@
         class="org.springframework.context.support.ReloadableResourceBundleMessageSource">  
         <property name="basename" value="classpath:messages" />  
         <property name="defaultEncoding" value="UTF-8" />  
-    </bean>  
+    </bean>
     
     <import resource="classpath:spring-domain.xml"/>
 	
     <!-- Actions spring -->
     <import resource="classpath:actions/spring-accueil.xml"/>
 	
-	<!-- ***************************************-->
-	<!-- 			BusinessRule	 			-->
-	<!-- ***************************************
-	
-	<bean id="businessRule" class="com.nxm.socle.coredomaine.impl.BusinessRuleImpl" />
-    
-    -->
-     <context:property-placeholder location="classpath*:*.properties" />   
+     <context:property-placeholder ignore-unresolvable="true" location="classpath*:*.properties" />   
         
 </beans>

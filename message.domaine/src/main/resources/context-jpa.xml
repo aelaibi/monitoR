@@ -20,32 +20,12 @@
             <props>
                 
                 <!-- dialect -->
-                <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">${bel.hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.show_sql">${bel.hibernate.show_sql}</prop>
+                <prop key="hibernate.dialect">${bel.hibernate.dialect}</prop>
                 <prop key="hibernate.connection.useUnicode">true</prop>
                 <prop key="hibernate.connection.charSet">UTF-8</prop>
                 
-                <!-- schema -->
-<!--                 <prop key="hibernate.default_schema">public</prop> -->
-                
-                <!-- 2d level cache -->
-                <prop key="hibernate.cache.use_query_cache">false</prop>
-                <prop key="hibernate.cache.use_second_level_cache">true</prop>
-                
-                <!-- ehcache -->
-                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</prop>
-                
-                <!-- misc -->
-                <prop key="hibernate.bytecode.use_reflection_optimizer">true</prop>
-                <prop key="hibernate.jdbc.use_scrollable_resultset">true</prop>
-                <prop key="hibernate.jdbc.use_streams_for_binary">true</prop>
-                <prop key="hibernate.jdbc.fetch_size">16</prop>
-                
-                <!-- logging debug information -->
-                <prop key="hibernate.show_sql">true</prop>
-                <prop key="hibernate.format_sql">false</prop>
-                <prop key="hibernate.generate_statistics">false</prop>
-                <prop key="hibernate.use_sql_comments">false</prop>
-                <prop key="hibernate.hbm2ddl.auto">auto</prop>
                 
             </props>
         </property>

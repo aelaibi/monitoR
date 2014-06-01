@@ -14,7 +14,7 @@
 			<!-- Autodetection des classes annotées @Entity -->
 			<property name="hibernate.archive.autodetection" value="class"/>
 		</properties>
-<!-- 		<class>ma.neoxia.message.entities.Role</class> -->
+<!-- 		<class>ma.ael.message.entities.Role</class> -->
 	</persistence-unit>
 	
 </persistence>

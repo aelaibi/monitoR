@@ -8,29 +8,29 @@
 		Action dans le struts.xml -->
 
 	<bean id="accueilAction"
-		class="ma.neoxia.message.actions.AccueilAction"
+		class="ma.ael.message.actions.AccueilAction"
 		scope="prototype" />
 		
 	<bean id="roleAction"
-		class="ma.neoxia.message.actions.ref.RoleAction"
+		class="ma.ael.message.actions.ref.RoleAction"
 		scope="prototype" />
 		
 	<bean id="messageControllerAction"
-		class="ma.neoxia.message.actions.MessageControllerAction"
+		class="ma.ael.message.actions.MessageControllerAction"
 		scope="prototype" />	
 	<bean id="message2ControllerAction"
-		class="ma.neoxia.message.actions.Message2ControllerAction"
+		class="ma.ael.message.actions.Message2ControllerAction"
 		scope="prototype" />	
 	<bean id="jsonTreeData"
-		class="ma.neoxia.message.actions.JsonTreeData"
+		class="ma.ael.message.actions.JsonTreeData"
 		scope="prototype" />	
 				
 	<bean id="applicationDomaineAction"
-		class="ma.neoxia.message.actions.ref.ApplicationDomaineAction"
+		class="ma.ael.message.actions.ref.ApplicationDomaineAction"
 		scope="prototype" />
 
 	<bean id="reportingAction"
-		class="ma.neoxia.message.actions.reporting.reportingAction"
+		class="ma.ael.message.actions.reporting.reportingAction"
 		scope="prototype" />
 
 </beans>

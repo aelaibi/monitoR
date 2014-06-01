@@ -68,7 +68,7 @@
 
 	<servlet>
 		<servlet-name>init</servlet-name>
-		<servlet-class>ma.neoxia.common.init.NxmInit</servlet-class>
+		<servlet-class>ma.ael.common.init.NxmInit</servlet-class>
 		<load-on-startup>5</load-on-startup>
 	</servlet>
 	<!-- resteasy servlet -->
@@ -79,7 +79,7 @@
 		</servlet-class>
 <!-- 		<init-param> -->
 <!-- 			<param-name>javax.ws.rs.Application</param-name> -->
-<!-- 			<param-value>ma.neoxia.message.resteasy.ws.MessageApplication</param-value> -->
+<!-- 			<param-value>ma.ael.message.resteasy.ws.MessageApplication</param-value> -->
 <!-- 		</init-param> -->
 	</servlet>
 	<servlet-mapping>

@@ -5,7 +5,7 @@
 	<artifactId>message.commun</artifactId>
 	<parent>
 		<artifactId>message</artifactId>
-		<groupId>ma.neoxia</groupId>
+		<groupId>ma.ael</groupId>
 		<version>0.1</version>
 	</parent>
 </project>
