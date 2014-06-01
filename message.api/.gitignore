@@ -2,3 +2,5 @@
 /.studio
 /.settings
 /.externalToolBuilders
+.project
+.classpath

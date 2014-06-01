@@ -1,1 +1,6 @@
 /target
+/.studio
+/.settings
+/.externalToolBuilders
+.project
+.classpath
